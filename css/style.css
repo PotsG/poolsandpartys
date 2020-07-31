@@ -1,6 +1,12 @@
 /* This is the single file output by scss. It is intended toi ONLY @import other files */
 /* abstracts first */
+/*******************************
+********************
+***    COLORS
+******************** 
+*********************************/
 /* Main Colors*/
+/*temps*/
 /* Section Colors*/
 /*! normalize.css v1.1.0 | MIT License | git.io/normalize */
 /* ==========================================================================
@@ -118,31 +124,37 @@ a:hover {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  background-color: none;
 }
 
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
+  background-color: none;
 }
 
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
+  background-color: none;
 }
 
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
+  background-color: none;
 }
 
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
+  background-color: none;
 }
 
 h6 {
   font-size: 0.67em;
   margin: 2.33em 0;
+  background-color: none;
 }
 
 /**
@@ -501,6 +513,39 @@ table {
   border-spacing: 0;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 2px;
+  font-family: "mono45-headline", "Open Sans", sans-serif;
+  min-height: 100vh;
+  background-color: #353535;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 ::selection {
   background: #000;
   color: #fff;
@@ -525,47 +570,101 @@ body {
 }
 
 .g-container {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   overflow: hidden;
-  background-color: #353535;
+  background-color: #e6e8e6;
 }
-.g-container .g-landing__wrapper {
+
+.g-landing__wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr) 2fr 1fr;
   grid-auto-rows: 50%;
   width: 100%;
   height: 100%;
 }
-.g-container .g-landing__section {
+.g-landing__section {
   display: block;
   width: 100%;
   height: 100%;
 }
-.g-container .g-landing__section--yellow {
+.g-landing__section--yellow {
   background-color: #fdfcdc;
 }
-.g-container .g-landing__section--blue {
+.g-landing__section--blue {
   background-color: #caf0f8;
 }
-.g-container .g-landing__section--purple {
+.g-landing__section--purple {
   background-color: #dee2ff;
 }
-.g-container .g-landing__section--red {
+.g-landing__section--red {
   background-color: #f5cac3;
 }
-.g-container .g-landing__section--egg {
+.g-landing__section--egg {
   background-color: #f7f4ea;
   grid-column: span 2;
 }
-.g-container .g-landing__section--orange {
+.g-landing__section--orange {
   background-color: #ffdab9;
   grid-row: span 2;
 }
 
-h1 {
+.invite {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.invite__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: #ce796b;
+  width: 100%;
+  border: 3px solid #ce796b;
+  margin: 50px;
+}
+.invite__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 6rem;
   text-align: center;
-  background-color: blue;
+  font-weight: 600;
+}
+.invite__title {
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 50px;
+}
+.invite__sub {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.invite__topic {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #3f4739;
+  margin-bottom: 90px;
+}
+.invite__timestamp {
+  font-size: 2rem;
+  color: #353535;
+  margin-bottom: 30px;
+}
+.invite__address {
+  font-size: 1.5rem;
+  color: #353535;
+}
+.invite__price {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #3f4739;
 }
 
 /*commmand sass --watch main.scss:../../build/css/style.css */
