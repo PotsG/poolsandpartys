@@ -617,6 +617,7 @@ body {
   display: flex;
 }
 .invite__inner {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   color: #ce796b;
@@ -624,21 +625,37 @@ body {
   border: 3px solid #ce796b;
   margin: 50px;
 }
+@media only screen and (max-width: 1024px) {
+  .invite__inner {
+    grid-template-columns: 100%;
+  }
+}
 .invite__content {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: 6rem;
+  padding-top: 6rem;
   text-align: center;
-  font-weight: 600;
+  font-weight: 500;
+}
+@media only screen and (max-width: 1024px) {
+  .invite__content {
+    padding-top: 3rem;
+    width: 100%;
+  }
 }
 .invite__title {
   font-size: 7rem;
   font-weight: 700;
   line-height: 1;
   margin-bottom: 50px;
+}
+@media only screen and (max-width: 1024px) {
+  .invite__title {
+    margin-bottom: 30px;
+  }
 }
 .invite__sub {
   font-size: 1.6rem;
@@ -658,13 +675,32 @@ body {
 }
 .invite__address {
   font-size: 1.5rem;
+  font-weight: 600;
   color: #353535;
 }
+@media (max-width: 1024px) {
+  .invite__address {
+    margin-bottom: 30px;
+  }
+}
 .invite__price {
+  font-size: 1.6rem;
+  font-weight: 600;
   position: absolute;
   bottom: 10px;
   left: 10px;
   color: #3f4739;
+}
+@media only screen and (max-width: 1024px) {
+  .invite__imageWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.08;
+    width: 100vh;
+    height: 100vh;
+  }
 }
 
 /*commmand sass --watch main.scss:../../build/css/style.css */
